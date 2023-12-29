@@ -1,0 +1,16 @@
+site_name: daily-reading
+site_url: http://docs.sfct.top
+nav:
+  - 📚 首页:
+      - 首页: index.md
+      - 关于: about.md
+  - 💎 应用层:
+      - HTTP: app/http.md
+      - HTTPS: app/https.md
+      - AMQP: app/amqp.md
+  - 🔮 传输层:
+      - UDP: trans/udp.md
+      - TCP: trans/tcp.md
+      - QUIC: trans/quic.md
+  - 💬 网络层: net/net.md
+theme: readthedocs
