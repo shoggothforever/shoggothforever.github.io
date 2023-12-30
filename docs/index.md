@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# 介绍
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## INTRO
 
-## Commands
+这是一份关于计算机网络的知识清单,不过目前的施工方向只有 OSI 7层网络架构中的应用层,传输层的协议,以及现代应用在网络层的工程实践
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+文档将会介绍传统的协议以及由此演变出来的现代化的协议,除了基本的协议内容之外,会更多的介绍这些协议在基本网络服务中的应用实践
