@@ -4,11 +4,11 @@ curDir=`pwd`
 # get shell direction
 
 workDir=$curDir
-echo $workDir
+
 cd $workDir
 
 bash ./sync.sh
 
-mkdocs gh-deploy
+mkdocs gh-deploy --remote-branch master
 
 cd $curDir
