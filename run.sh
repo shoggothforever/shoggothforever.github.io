@@ -3,7 +3,7 @@
 curDir=`pwd`
 # get shell direction
 
-workDir=$curDir"/docs"
+workDir=$curDir
 echo $workDir
 cd $workDir
 
