@@ -7,7 +7,7 @@ workDir=$curDir
 
 cd $workDir
 
-bash ./sync.sh
+bash ./sync.sh $@
 
 mkdocs gh-deploy
 
