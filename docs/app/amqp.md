@@ -13,7 +13,7 @@
 RabbitMQ架构图
 ![架构](img/amqp1.png)
 
-???+ key-point "接口与实现"
+???+ key-point "① 接口与实现"
     AMQP相当于接口，RabbitMQ完全实现了AMQP的要求，所以它是AMQP的一种实现形式，因此可以在任何AMQP预设的场景下使用。但是这不是充要条件，如果一个实现可以充当消息队列，并不说明它实现了AMQP，例如kafka
 
     AMQP 0-9-1 规定了通信消息传递的规范：
@@ -39,7 +39,7 @@ RabbitMQ架构图
     - 消息持久化和确认
 
 
-???+ section "① 应用关键词解释"
+???+ section "② 应用关键词解释"
 
     1. Broker：一个消息队列服务提供方
     2. vhost：一个Broker中互不干扰的多个消息队列实例
@@ -73,7 +73,7 @@ RabbitMQ架构图
         - ContentType：数据类型标记
         - Data：二进制数据
 
-???+ section "② 使用流程，以golang SDK举例"
+???+ section "③ 使用流程，以golang SDK举例"
 
     演示流程仅供参考，实际生产环境的消费队列使用请查阅相关资料
     演示程序泳道图
@@ -118,7 +118,7 @@ RabbitMQ架构图
 
     ```
 
-???+ section "① RabbitMQ与Erlang"
+???+ section "④ RabbitMQ与Erlang"
 
     RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 ( 详情请查阅[官方文档](https://www.erlang.org/) )。
 

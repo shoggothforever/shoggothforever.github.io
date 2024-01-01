@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rabbitmq" class="md-skip">
+        <a href="#总览--overview" class="md-skip">
           Skip to content
         </a>
       
@@ -381,6 +381,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AMQP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="amqp.html" class="md-nav__link md-nav__link--active">
         
   
@@ -390,6 +401,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#认识rabbitmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      认识RabbitMQ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -571,6 +610,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#认识rabbitmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      认识RabbitMQ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -592,14 +648,146 @@
   
 
 
-<h1 id="rabbitmq">RabbitMQ<a class="headerlink" href="#rabbitmq" title="Permanent link">&para;</a></h1>
+<h1 id="总览--overview">总览 | Overview<a class="headerlink" href="#总览--overview" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 10 个字 </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1165 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 27 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
-<div class="admonition info broker">
-<p class="admonition-title">Info</p>
-<p>兔年的最后一天</p>
+<p><strong>写于 2023-12-31 兔年的最后一天</strong></p>
+<div class="admonition info">
+<p class="admonition-title">引言</p>
+<p>本篇文章将会涉及到对应用层协议AMQP(Advanced Message Queuing Protocols)以及消息队列rabbitMQ的介绍，本文旨在串联起网络相关的知识点，对于在介绍AMQP过程中涉及到的其他计算机网络相关的技术原理，只会进行比较浅显的介绍</p>
+<ol>
+<li>AMQP是一种用于客户端程序之间相互通信的应用层协议,它为C/S架构的通信实体的行为制定了抽象的需要遵守的规范，它是一种可编程的协议，提供给了应用开发者一部分自由，具体的实现细节例如实体间的通信路由交给开发者自行设计</li>
+<li>RabbitMQ是使用Erlang编程语言开发的一款消息队列应用,具体实现了AMQP 0-9-1 协议
+<a href="https://www.rabbitmq.com/tutorials/amqp-concepts.html#highlevel-overview">rabbitMQ官方文档</a></li>
+</ol>
 </div>
+<h2 id="认识rabbitmq">认识RabbitMQ<a class="headerlink" href="#认识rabbitmq" title="Permanent link">&para;</a></h2>
+<p>RabbitMQ架构图
+<a class="glightbox" href="img/amqp1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="架构" src="img/amqp1.png" /></a></p>
+<details class="key-point" open="open">
+<summary>接口与实现</summary>
+<p>AMQP相当于接口，RabbitMQ完全实现了AMQP的要求，所以它是AMQP的一种实现形式，因此可以在任何AMQP预设的场景下使用。但是这不是充要条件，如果一个实现可以充当消息队列，并不说明它实现了AMQP，例如kafka</p>
+<p>AMQP 0-9-1 规定了通信消息传递的规范：</p>
+<ol>
+<li>消息实体：<ul>
+<li>产生者(Publisher/Producer)</li>
+<li>交换机(Exchanger)</li>
+<li>队列（Queue）</li>
+<li>消费者（Consumer）</li>
+</ul>
+</li>
+<li>
+<p>行为：</p>
+<ul>
+<li>消息传输使用TCP确保可靠，使用TLS确保安全</li>
+<li>使用Channle处理多连接，节省资源消耗</li>
+<li>使用Vhost实现环境隔离，由客户端选择使用哪个Vhost</li>
+</ul>
+</li>
+</ol>
+<p>RabbitMQ 实现的方法：</p>
+<ul>
+<li>与AMQP服务器连接的建立与关闭（Connection）</li>
+<li>利用多路复用技术建立进程/线程隔离轻量化连接（Channel）</li>
+<li>声明交换机和队列</li>
+<li>交换机对消息进行路由</li>
+<li>为队列绑定键</li>
+<li>消息持久化和确认</li>
+</ul>
+</details>
+<details class="section" open="open">
+<summary>① 应用关键词解释</summary>
+<ol>
+<li>Broker：一个消息队列服务提供方</li>
+<li>vhost：一个Broker中互不干扰的多个消息队列实例</li>
+<li>Connection：使用者与服务器建立的TCP连接，可以复用<ul>
+<li>连接形式amqp://userName:password@ipAddress:portNumber/virtualHost</li>
+</ul>
+</li>
+<li>Channel：专用连接，可以在一个Connection中无限创建；大部分实际功能都在Channel中</li>
+<li>Exchange：根据规则分发消息进入Queue的模型<ul>
+<li>Name：交换机名称</li>
+<li>Type：交换机类型<ul>
+<li>"" ：空字符串是一个默认的Direct模式Exchange</li>
+<li>Direct：向绑定的 Name == RoutingKey 的队列发送</li>
+<li>Fanout：向绑定的队列全体广播</li>
+<li>Topic：向绑定的 Name 模式匹配 RoutingKey 的队列发送</li>
+<li>routingKey 可以是 *.logger.# 这种表达式<ul>
+<li>* 代表一个词</li>
+<li># 代表0或多个词</li>
+</ul>
+</li>
+<li>Header：不常用，根据Message Header进行任意或全部键值对匹配</li>
+</ul>
+</li>
+<li>Durability：持久化标志，表明此交换机是否是持久化的</li>
+<li>Auto-delete：删除标志，表明当所有队列在完成使用此exchange时，是否删除</li>
+<li>Arguments：其它参数</li>
+</ul>
+</li>
+<li>Queue：保存消息的队列结构，需要与Exchange绑定（Bind）</li>
+<li>Name：队列名称<ul>
+<li>Durable：消息代理重启后，队列依旧存在</li>
+<li>Exclusive：只被一个连接（connection）使用，而且当连接关闭后队列即被删除</li>
+<li>Auto-delete：当最后一个消费者退订后即被删除</li>
+<li>Arguments：其它参数</li>
+</ul>
+</li>
+<li>Message：一条消息<ul>
+<li>ExchangeName：指定发送到的Exchange</li>
+<li>Header：一个Map，存储元数据（用于Header Exchange）</li>
+<li>RoutingKey：指定消息的Tag</li>
+<li>ContentType：数据类型标记</li>
+<li>Data：二进制数据</li>
+</ul>
+</li>
+</ol>
+</details>
+<details class="section" open="open">
+<summary>② 使用流程，以golang SDK举例</summary>
+<p>演示流程仅供参考，实际生产环境的消费队列使用请查阅相关资料
+演示程序泳道图
+<a class="glightbox" href="img/amqp2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="流程演示" src="img/amqp2.png" /></a></p>
+<p>建立连接（客户端，服务端步骤相同）
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">conn</span><span class="p">,</span><span class="nx">_</span><span class="o">:=</span><span class="nx">amqp</span><span class="p">.</span><span class="nx">Dial</span><span class="p">(</span><span class="nx">amqp</span><span class="p">:</span><span class="c1">//userName:password@ipAddress:portNumber/virtualHost)</span>
+<span class="w">    </span><span class="nx">channle</span><span class="p">,</span><span class="nx">_</span><span class="o">:=</span><span class="nx">conn</span><span class="p">.</span><span class="nx">Channel</span><span class="p">()</span>
+</code></pre></div></p>
+<p>生产端
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//声明并设置Exchanger的属性，具体可参考上一段落关键词描述</span>
+<span class="w">    </span><span class="nx">channel</span><span class="p">.</span><span class="nx">ExchangerDeclare</span><span class="p">(</span><span class="nx">Attributes</span><span class="o">...</span><span class="p">)</span>
+
+<span class="w">    </span><span class="cm">/* Publish 发送消息</span>
+<span class="cm">    * exchangerName 交换机名称</span>
+<span class="cm">    * routingKey 用于消息路由的key，最终会与队列的bindingKey比对确认消息的接收队列</span>
+<span class="cm">    * messagerWrapper 消息的载体，除了消息本身还提供了Broker代理消息的一些选项信息</span>
+<span class="cm">    */</span>
+<span class="w">    </span><span class="nx">channel</span><span class="p">.</span><span class="nx">Publish</span><span class="p">(</span><span class="nx">exchangerName</span><span class="p">,</span><span class="nx">routingKey</span><span class="p">,</span><span class="nx">messageWrapper</span><span class="p">)</span>
+</code></pre></div></p>
+<p>服务端
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//声明并设置Queue的属性，具体可参考上一段落关键词描述</span>
+<span class="w">    </span><span class="nx">queue</span><span class="p">,</span><span class="nx">err</span><span class="o">:=</span><span class="nx">channel</span><span class="p">.</span><span class="nx">QueueDeclare</span><span class="p">(</span><span class="nx">Attributes</span><span class="o">...</span><span class="p">)</span>
+
+<span class="w">    </span><span class="cm">/* QueueBind 将Queue与对应的Exchanger绑定，并且设置bindingKey用于消息的路由</span>
+<span class="cm">    * queueName 队列名字</span>
+<span class="cm">    * bindingKey 绑定键</span>
+<span class="cm">    * exchangerName 交换机名称</span>
+<span class="cm">    * options 与声明队列时设置的一些属性相同</span>
+<span class="cm">    */</span>
+<span class="w">    </span><span class="nx">channel</span><span class="p">.</span><span class="nx">QueueBind</span><span class="p">(</span><span class="nx">queueName</span><span class="p">,</span><span class="nx">bindingKey</span><span class="p">,</span><span class="nx">exchangerName</span><span class="p">,</span><span class="nx">options</span><span class="o">...</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">//接收消息 获取一个可以持续接收消息的通道</span>
+<span class="w">    </span><span class="nx">msgChannel</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="nx">channel</span><span class="p">.</span><span class="nx">Consume</span><span class="p">(</span><span class="nx">queueName</span><span class="p">,</span><span class="nx">consumerID</span><span class="p">,</span><span class="nx">options</span><span class="o">...</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">//服务端自定义业务逻辑处理消息</span>
+</code></pre></div></p>
+</details>
+<details class="section" open="open">
+<summary>① RabbitMQ与Erlang</summary>
+<p>RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 ( 详情请查阅<a href="https://www.erlang.org/">官方文档</a> )。</p>
+<p>Erlang的语言哲学从设计之初就包含了高并发的思想，采用了轻量化的多进程模型（尽管当时的硬件并不能支持高并发），同时它也是一门函数式编程的语言，在正常的代码开发中也会涉及到大量的递归调用，这些都加大了学习的难度，另外erlang应用的开发是基于OTP思想，同现在流行的面向对象(OOP)思想又有些差异，这需要学习者能够改变固有思维</p>
+<p>综上，解读RabbitMQ源码的难度不小，并且实现涉及到的知识面会非常广，在拓宽眼界的同时需要抓住重点。</p>
+</details>
 
 
 
