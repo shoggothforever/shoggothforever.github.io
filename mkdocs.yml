@@ -4,18 +4,23 @@ use_directory_urls: false
 repo_url: https://github.com/shoggothforever/shoggothforever.github.io
 edit_uri: edit/master/docs/
 nav:
-  - 📚 首页:
-      - 首页: index.md
-  - 💎 应用层:
-      - HTTP: app/http.md
-      - HTTPS: app/https.md
-      - AMQP: app/amqp.md
-  - 🔮 传输层:
-      - UDP: trans/udp.md
-      - TCP: trans/tcp.md
-      - QUIC: trans/quic.md
-      - TLS: trans/tls.md
-  - 💬 网络层: net/net.md
+  - 📚 首页: index.md
+  - 网络协议:
+    - 💎 应用层:
+        - HTTP: app/http.md
+        - HTTPS: app/https.md
+        - AMQP/RabbitMQ: app/amqp.md
+    - 🔮 传输层:
+        - UDP: trans/udp.md
+        - TCP: trans/tcp.md
+        - QUIC: trans/quic.md
+        - TLS: trans/tls.md
+    - 💬 网络层: net/net.md
+  - 编程语言:
+    - Golang: lang/golang.md
+    - Erlang:
+        - 基础知识: lang/erlang.md
+        - OTP: lang/erlang-otp.md
 theme:
   name: material
   features:

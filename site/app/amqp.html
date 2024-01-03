@@ -666,7 +666,7 @@
 <p>RabbitMQ架构图
 <a class="glightbox" href="img/amqp1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="架构" src="img/amqp1.png" /></a></p>
 <details class="key-point" open="open">
-<summary>接口与实现</summary>
+<summary>① 接口与实现</summary>
 <p>AMQP相当于接口，RabbitMQ完全实现了AMQP的要求，所以它是AMQP的一种实现形式，因此可以在任何AMQP预设的场景下使用。但是这不是充要条件，如果一个实现可以充当消息队列，并不说明它实现了AMQP，例如kafka</p>
 <p>AMQP 0-9-1 规定了通信消息传递的规范：</p>
 <ol>
@@ -697,7 +697,7 @@
 </ul>
 </details>
 <details class="section" open="open">
-<summary>① 应用关键词解释</summary>
+<summary>② 应用关键词解释</summary>
 <ol>
 <li>Broker：一个消息队列服务提供方</li>
 <li>vhost：一个Broker中互不干扰的多个消息队列实例</li>
@@ -745,7 +745,7 @@
 </ol>
 </details>
 <details class="section" open="open">
-<summary>② 使用流程，以golang SDK举例</summary>
+<summary>③ 使用流程，以golang SDK举例</summary>
 <p>演示流程仅供参考，实际生产环境的消费队列使用请查阅相关资料
 演示程序泳道图
 <a class="glightbox" href="img/amqp2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="流程演示" src="img/amqp2.png" /></a></p>
@@ -783,7 +783,7 @@
 </code></pre></div></p>
 </details>
 <details class="section" open="open">
-<summary>① RabbitMQ与Erlang</summary>
+<summary>④ RabbitMQ与Erlang</summary>
 <p>RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 ( 详情请查阅<a href="https://www.erlang.org/">官方文档</a> )。</p>
 <p>Erlang的语言哲学从设计之初就包含了高并发的思想，采用了轻量化的多进程模型（尽管当时的硬件并不能支持高并发），同时它也是一门函数式编程的语言，在正常的代码开发中也会涉及到大量的递归调用，这些都加大了学习的难度，另外erlang应用的开发是基于OTP思想，同现在流行的面向对象(OOP)思想又有些差异，这需要学习者能够改变固有思维</p>
 <p>综上，解读RabbitMQ源码的难度不小，并且实现涉及到的知识面会非常广，在拓宽眼界的同时需要抓住重点。</p>
