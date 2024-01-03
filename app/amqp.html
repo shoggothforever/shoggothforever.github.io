@@ -20,7 +20,7 @@
     
     
       
-        <title>AMQP - daily-reading</title>
+        <title>AMQP/RabbitMQ - daily-reading</title>
       
     
     
@@ -89,7 +89,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="daily-reading" class="md-header__button md-logo" aria-label="daily-reading" data-md-component="logo">
+    <a href="../index.html" title="daily-reading" class="md-header__button md-logo" aria-label="daily-reading" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AMQP
+              AMQP/RabbitMQ
             
           </span>
         </div>
@@ -196,7 +196,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="daily-reading" class="md-nav__button md-logo" aria-label="daily-reading" data-md-component="logo">
+    <a href="../index.html" title="daily-reading" class="md-nav__button md-logo" aria-label="daily-reading" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -225,61 +225,16 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     📚 首页
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            📚 首页
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    首页
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -309,7 +264,7 @@
             
   
   <span class="md-ellipsis">
-    💎 应用层
+    网络协议
   </span>
   
 
@@ -318,6 +273,45 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            网络协议
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    💎 应用层
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             💎 应用层
           </label>
@@ -385,7 +379,7 @@
           
   
   <span class="md-ellipsis">
-    AMQP
+    AMQP/RabbitMQ
   </span>
   
 
@@ -396,7 +390,7 @@
         
   
   <span class="md-ellipsis">
-    AMQP
+    AMQP/RabbitMQ
   </span>
   
 
@@ -426,6 +420,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rabbitmq对amqp的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMq对AMQP的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMq对AMQP的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternate-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dead-letter-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dead Letter Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior Queue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq实现机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMQ实现机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMQ实现机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-select-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      send-select routing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -441,9 +510,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -458,10 +528,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -472,8 +542,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             🔮 传输层
           </label>
@@ -569,9 +639,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -586,6 +657,166 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang/golang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Golang
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Erlang
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Erlang
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang/erlang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang/erlang-otp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -625,6 +856,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rabbitmq对amqp的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMq对AMQP的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMq对AMQP的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternate-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dead-letter-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dead Letter Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior Queue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq实现机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMQ实现机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMQ实现机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-select-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      send-select routing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -650,7 +956,7 @@
 
 <h1 id="总览--overview">总览 | Overview<a class="headerlink" href="#总览--overview" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1165 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 27 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1603 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 41 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 9 分钟</p>
 </div>
 <p><strong>写于 2023-12-31 兔年的最后一天</strong></p>
 <div class="admonition info">
@@ -784,9 +1090,62 @@
 </details>
 <details class="section" open="open">
 <summary>④ RabbitMQ与Erlang</summary>
-<p>RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 ( 详情请查阅<a href="https://www.erlang.org/">官方文档</a> )。</p>
+<p>RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 (详情请查阅<a href="https://www.erlang.org/">官方文档</a>)。</p>
 <p>Erlang的语言哲学从设计之初就包含了高并发的思想，采用了轻量化的多进程模型（尽管当时的硬件并不能支持高并发），同时它也是一门函数式编程的语言，在正常的代码开发中也会涉及到大量的递归调用，这些都加大了学习的难度，另外erlang应用的开发是基于OTP思想，同现在流行的面向对象(OOP)思想又有些差异，这需要学习者能够改变固有思维</p>
-<p>综上，解读RabbitMQ源码的难度不小，并且实现涉及到的知识面会非常广，在拓宽眼界的同时需要抓住重点。</p>
+<p>综上，解读RabbitMQ源码的难度不小，并且源码实现蕴含的思想涉及到的知识面非常广，因此在拓宽眼界的同时需要抓住重点。</p>
+</details>
+<h2 id="rabbitmq对amqp的扩展"><a href="https://www.rabbitmq.com/extensions.html">RabbitMq对AMQP的扩展</a><a class="headerlink" href="#rabbitmq对amqp的扩展" title="Permanent link">&para;</a></h2>
+<p>原文根据RabbitMQ的行为对具体概念进行了归类，不过本文选择根据组件的种类进行分类，并且省略了部分内容</p>
+<details class="section" open="open">
+<summary>① Exchanger</summary>
+<h3 id="alternate-exchange"><a href="https://www.rabbitmq.com/ae.html">Alternate Exchange</a><a class="headerlink" href="#alternate-exchange" title="Permanent link">&para;</a></h3>
+<p>Alternate Exchange 下文简称AE，这个组件起到了路由分支选择的作用，如果希望消息无法被Exchanger 成功路由时可以执行其他的行为，则可以配置AE，它提供了一种路由选择的else语义。</p>
+<p>您可以为除了default Exchanger之外的Exchanger配置AE，RabbitMQ提供了两种配置（policy，client-arguments）的方式，官方推荐使用policy，因此这里也只介绍使用policy的方式
+<div class="highlight"><pre><span></span><code><span class="c1"># linux环境</span>
+<span class="c1"># AE代表 policy类型</span>
+<span class="c1"># 随后是匹配声明对象的正则表达式</span>
+<span class="c1"># 随后是声明的内容，提供了AE的名称</span>
+<span class="c1"># apply-to即表明作用对象的类型是Exchange</span>
+rabbitmqctl<span class="w"> </span>set_policy<span class="w"> </span>AE<span class="w"> </span><span class="s2">&quot;^exchanger1</span>$<span class="s2">&quot;</span><span class="w"> </span><span class="s1">&#39;{&quot;alternate-exchange&quot;:&quot;AEName&quot;}&#39;</span><span class="w"> </span>--apply-to<span class="w"> </span>exchanger
+</code></pre></div>
+声明policy之后如果选择Exchanger1发送的message路由匹配不成功就会交由AE路由,可以将AE视作一种责任链设计模式的实现形式，在一个Exchange路由失败的message会沿着这条责任链路下的AE继续尝试路由直到匹配成功或者完全失败</p>
+<h3 id="dead-letter-exchange"><a href="https://www.rabbitmq.com/dlx.html">Dead Letter Exchange</a><a class="headerlink" href="#dead-letter-exchange" title="Permanent link">&para;</a></h3>
+<p>Dead Letter Exchange 下文简称DLX,关键词Dead Letter，死信 ，通常符合以下情况的的Message会被称为死信：</p>
+<ol>
+<li>消息的requeue参数未设置并且被消费者nack（一种消息的消极确认机制）</li>
+<li>设置了TTL的消息过期了</li>
+<li>消息将要被路由到的Queue满了</li>
+</ol>
+<p>DLX只是根据功能命名的Exchange，它的定义方式同普通的Exchange一样，它的声明同样可以采用policy方式
+<div class="highlight"><pre><span></span><code><span class="c1"># linux环境</span>
+<span class="c1"># DLX代表 policy类型</span>
+<span class="c1"># 随后是匹配声明对象的正则表达式</span>
+<span class="c1"># 随后是声明的内容，提供了DLX的名称</span>
+<span class="c1"># apply-to即表明作用对象的类型是queue</span>
+<span class="c1"># 该声明的含义是对于所有队列产生的死信都会交由my-dlx 进行路由处理</span>
+rabbitmqctl<span class="w"> </span>set_policy<span class="w"> </span>DLX<span class="w"> </span><span class="s2">&quot;.*&quot;</span><span class="w"> </span><span class="s1">&#39;{&quot;dead-letter-exchange&quot;:&quot;my-dlx&quot;}&#39;</span><span class="w"> </span>--apply-to<span class="w"> </span>queues
+</code></pre></div></p>
+<p>同理Dead Letter Queue也只是一种功能定义，即在执行QueueDeclare行为时以DLX作为绑定Exchange的Queue</p>
+</details>
+<details class="section" open="open">
+<summary>② Queue</summary>
+<h3 id="prior-queue"><a href="https://www.rabbitmq.com/priority.html">Prior Queue</a><a class="headerlink" href="#prior-queue" title="Permanent link">&para;</a></h3>
+</details>
+<details class="section" open="open">
+<summary>③ Message</summary>
+</details>
+<h2 id="rabbitmq实现机制">RabbitMQ实现机制<a class="headerlink" href="#rabbitmq实现机制" title="Permanent link">&para;</a></h2>
+<details class="section" open="open">
+<summary>① Confirms</summary>
+<p><a href="https://www.rabbitmq.com/confirms.html">this</a></p>
+</details>
+<details class="section" open="open">
+<summary>② routing</summary>
+<h3 id="binding"><a href="https://www.rabbitmq.com/e2e.html">binding</a><a class="headerlink" href="#binding" title="Permanent link">&para;</a></h3>
+<h3 id="send-select-routing"><a href="https://www.rabbitmq.com/sender-selected.html">send-select routing</a><a class="headerlink" href="#send-select-routing" title="Permanent link">&para;</a></h3>
+</details>
+<details class="section" open="open">
+<summary>Section</summary>
 </details>
 
 
