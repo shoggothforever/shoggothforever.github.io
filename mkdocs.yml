@@ -38,6 +38,14 @@ plugins:
         - zh
         - en
       separator: '[\s\-\.]+'
+  - encryptcontent:
+      title_prefix: '[LOCK]'
+      summary: 'canAccess := CheckPassword()'
+      placeholder: 'input password'
+      decryption_failure_message: 'Ooops,password not unmatch! canAccess: false'
+      encryption_info_message: "for {select { case pass,ok : <- your_input_stream : if ok && match(pass){return true}}}"
+      password_file: "./passwords.yml"
+
 markdown_extensions:
   - toc:
       permalink: true # link for each title

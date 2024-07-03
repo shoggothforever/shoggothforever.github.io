@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
-        <title>AMQP - daily-reading</title>
+        <title>AMQP/RabbitMQ - daily-reading</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -51,17 +51,15 @@
     
     
    <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -89,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="daily-reading" class="md-header__button md-logo" aria-label="daily-reading" data-md-component="logo">
+    <a href="../index.html" title="daily-reading" class="md-header__button md-logo" aria-label="daily-reading" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AMQP
+              AMQP/RabbitMQ
             
           </span>
         </div>
@@ -146,7 +144,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -163,7 +161,7 @@
         <a href="https://github.com/shoggothforever/shoggothforever.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -196,7 +194,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="daily-reading" class="md-nav__button md-logo" aria-label="daily-reading" data-md-component="logo">
+    <a href="../index.html" title="daily-reading" class="md-nav__button md-logo" aria-label="daily-reading" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -209,7 +207,7 @@
       <a href="https://github.com/shoggothforever/shoggothforever.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -225,49 +223,12 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    📚 首页
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            📚 首页
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    首页
+    📚 首页
   </span>
   
 
@@ -275,14 +236,6 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
@@ -292,7 +245,6 @@
   
   
   
-    
     
     
     
@@ -301,11 +253,47 @@
       
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络协议
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            网络协议
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -316,8 +304,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             💎 应用层
           </label>
@@ -385,7 +373,7 @@
           
   
   <span class="md-ellipsis">
-    AMQP
+    AMQP/RabbitMQ
   </span>
   
 
@@ -396,7 +384,7 @@
         
   
   <span class="md-ellipsis">
-    AMQP
+    AMQP/RabbitMQ
   </span>
   
 
@@ -426,6 +414,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rabbitmq对amqp的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMq对AMQP的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMq对AMQP的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternate-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dead-letter-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dead Letter Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior Queue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq实现机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMQ实现机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMQ实现机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      binding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -441,14 +504,14 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
   
-    
     
     
     
@@ -457,11 +520,10 @@
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -472,8 +534,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             🔮 传输层
           </label>
@@ -569,9 +631,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -586,6 +649,162 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang/golang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Golang
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Erlang
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Erlang
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang/erlang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang/erlang-otp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -625,6 +844,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rabbitmq对amqp的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMq对AMQP的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMq对AMQP的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternate-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dead-letter-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dead Letter Exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior Queue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rabbitmq实现机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      RabbitMQ实现机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RabbitMQ实现机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      binding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -650,12 +944,12 @@
 
 <h1 id="总览--overview">总览 | Overview<a class="headerlink" href="#总览--overview" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1165 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 27 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2150 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 41 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 11 分钟</p>
 </div>
 <p><strong>写于 2023-12-31 兔年的最后一天</strong></p>
 <div class="admonition info">
 <p class="admonition-title">引言</p>
-<p>本篇文章将会涉及到对应用层协议AMQP(Advanced Message Queuing Protocols)以及消息队列rabbitMQ的介绍，本文旨在串联起网络相关的知识点，对于在介绍AMQP过程中涉及到的其他计算机网络相关的技术原理，只会进行比较浅显的介绍</p>
+<p>本篇文章将会介绍应用层协议<a href="https://rabbitmq.com/resources/specs/amqp0-9-1.pdf" target="_blank">AMQP 0-9-1(Advanced Message Queuing Protocols)</a>以及消息队列RabbitMQ，对于在介绍AMQP过程中涉及到的其他计算机网络相关的技术原理，只会进行比较浅显的介绍</p>
 <ol>
 <li>AMQP是一种用于客户端程序之间相互通信的应用层协议,它为C/S架构的通信实体的行为制定了抽象的需要遵守的规范，它是一种可编程的协议，提供给了应用开发者一部分自由，具体的实现细节例如实体间的通信路由交给开发者自行设计</li>
 <li>RabbitMQ是使用Erlang编程语言开发的一款消息队列应用,具体实现了AMQP 0-9-1 协议
@@ -663,8 +957,18 @@
 </ol>
 </div>
 <h2 id="认识rabbitmq">认识RabbitMQ<a class="headerlink" href="#认识rabbitmq" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">官方简介</p>
+<p>摘自一篇较新的<a href="https://blog.rabbitmq.com/posts/2023/07/mqtt5" target="_blank">官方博客</a>中的概述</p>
+<ul>
+<li>is the leading AMQP 0.9.1 broker</li>
+<li>is a streaming broker</li>
+<li>excels in cross-protocol interoperability</li>
+<li>is becoming one of the leading MQTT brokers thanks to support for MQTT 5.0 released in 3.13 and Native MQTT released in 3.12</li>
+</ul>
+</div>
 <p>RabbitMQ架构图
-<a class="glightbox" href="img/amqp1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="架构" src="img/amqp1.png" /></a></p>
+<a class="glightbox" href="img/amqp1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="架构" src="img/amqp1.png" /></a></p>
 <details class="key-point" open="open">
 <summary>① 接口与实现</summary>
 <p>AMQP相当于接口，RabbitMQ完全实现了AMQP的要求，所以它是AMQP的一种实现形式，因此可以在任何AMQP预设的场景下使用。但是这不是充要条件，如果一个实现可以充当消息队列，并不说明它实现了AMQP，例如kafka</p>
@@ -748,7 +1052,7 @@
 <summary>③ 使用流程，以golang SDK举例</summary>
 <p>演示流程仅供参考，实际生产环境的消费队列使用请查阅相关资料
 演示程序泳道图
-<a class="glightbox" href="img/amqp2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="流程演示" src="img/amqp2.png" /></a></p>
+<a class="glightbox" href="img/amqp2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="流程演示" src="img/amqp2.png" /></a></p>
 <p>建立连接（客户端，服务端步骤相同）
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">conn</span><span class="p">,</span><span class="nx">_</span><span class="o">:=</span><span class="nx">amqp</span><span class="p">.</span><span class="nx">Dial</span><span class="p">(</span><span class="nx">amqp</span><span class="p">:</span><span class="c1">//userName:password@ipAddress:portNumber/virtualHost)</span>
 <span class="w">    </span><span class="nx">channle</span><span class="p">,</span><span class="nx">_</span><span class="o">:=</span><span class="nx">conn</span><span class="p">.</span><span class="nx">Channel</span><span class="p">()</span>
@@ -784,9 +1088,91 @@
 </details>
 <details class="section" open="open">
 <summary>④ RabbitMQ与Erlang</summary>
-<p>RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 ( 详情请查阅<a href="https://www.erlang.org/">官方文档</a> )。</p>
+<p>RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 (详情请查阅<a href="https://www.erlang.org/" target="_blank">官方文档</a>)。</p>
 <p>Erlang的语言哲学从设计之初就包含了高并发的思想，采用了轻量化的多进程模型（尽管当时的硬件并不能支持高并发），同时它也是一门函数式编程的语言，在正常的代码开发中也会涉及到大量的递归调用，这些都加大了学习的难度，另外erlang应用的开发是基于OTP思想，同现在流行的面向对象(OOP)思想又有些差异，这需要学习者能够改变固有思维</p>
-<p>综上，解读RabbitMQ源码的难度不小，并且实现涉及到的知识面会非常广，在拓宽眼界的同时需要抓住重点。</p>
+<p>综上，解读RabbitMQ源码的难度不小，并且源码实现蕴含的思想涉及到的知识面非常广，因此在拓宽眼界的同时需要抓住重点。</p>
+</details>
+<h2 id="rabbitmq对amqp的扩展"><a href="https://www.rabbitmq.com/extensions.html" target="_blank">RabbitMq对AMQP的扩展</a><a class="headerlink" href="#rabbitmq对amqp的扩展" title="Permanent link">&para;</a></h2>
+<p>原文根据RabbitMQ的行为对具体概念进行了归类，不过本文选择根据组件的种类进行分类，并且省略了部分内容</p>
+<details class="section" open="open">
+<summary>① Exchanger</summary>
+<h3 id="alternate-exchange"><a href="https://www.rabbitmq.com/ae.html" target="_blank">Alternate Exchange</a><a class="headerlink" href="#alternate-exchange" title="Permanent link">&para;</a></h3>
+<p>Alternate Exchange 下文简称AE，这个组件起到了路由分支选择的作用，如果希望消息无法被Exchanger 成功路由时可以执行其他的行为，则可以配置AE，它提供了一种路由选择的else语义。</p>
+<p>您可以为除了default Exchanger之外的Exchanger配置AE，RabbitMQ提供了两种配置（policy，client-arguments）的方式，官方推荐使用policy，因此这里也只介绍使用policy的方式
+<div class="highlight"><pre><span></span><code><span class="c1"># linux环境</span>
+<span class="c1"># AE代表 policy类型</span>
+<span class="c1"># 随后是匹配声明对象的正则表达式</span>
+<span class="c1"># 随后是声明的内容，提供了AE的名称</span>
+<span class="c1"># apply-to即表明作用对象的类型是Exchange</span>
+rabbitmqctl<span class="w"> </span>set_policy<span class="w"> </span>AE<span class="w"> </span><span class="s2">&quot;^exchanger1</span>$<span class="s2">&quot;</span><span class="w"> </span><span class="s1">&#39;{&quot;alternate-exchange&quot;:&quot;AEName&quot;}&#39;</span><span class="w"> </span>--apply-to<span class="w"> </span>exchanger
+</code></pre></div>
+声明policy之后如果选择Exchanger1发送的message路由匹配不成功就会交由AE路由,可以将AE视作一种责任链设计模式的实现形式，在一个Exchange路由失败的message会沿着这条责任链路下的AE继续尝试路由直到匹配成功或者完全失败</p>
+<h3 id="dead-letter-exchange"><a href="https://www.rabbitmq.com/dlx.html">Dead Letter Exchange</a><a class="headerlink" href="#dead-letter-exchange" title="Permanent link">&para;</a></h3>
+<p>Dead Letter Exchange 下文简称DLX,关键词Dead Letter，死信 ，通常符合以下情况的的Message会被称为死信：</p>
+<ol>
+<li>消息的requeue参数未设置并且被消费者nack（一种消息的消极确认机制）</li>
+<li>设置了TTL的消息过期了</li>
+<li>消息将要被路由到的Queue满了</li>
+</ol>
+<p>DLX只是根据功能命名的Exchange，它的定义方式同普通的Exchange一样，它的声明同样可以采用policy方式
+<div class="highlight"><pre><span></span><code><span class="c1"># linux环境</span>
+<span class="c1"># DLX代表 policy类型</span>
+<span class="c1"># 随后是匹配声明对象的正则表达式</span>
+<span class="c1"># 随后是声明的内容，提供了DLX的名称</span>
+<span class="c1"># apply-to即表明作用对象的类型是queue</span>
+<span class="c1"># 该声明的含义是对于所有队列产生的死信都会交由my-dlx 进行路由处理</span>
+rabbitmqctl<span class="w"> </span>set_policy<span class="w"> </span>DLX<span class="w"> </span><span class="s2">&quot;.*&quot;</span><span class="w"> </span><span class="s1">&#39;{&quot;dead-letter-exchange&quot;:&quot;my-dlx&quot;}&#39;</span><span class="w"> </span>--apply-to<span class="w"> </span>queues
+</code></pre></div></p>
+<p>同理Dead Letter Queue也只是一种功能定义，即在执行QueueDeclare行为时以DLX作为绑定Exchange的Queue</p>
+</details>
+<details class="section" open="open">
+<summary>② Queue</summary>
+<h3 id="prior-queue"><a href="https://www.rabbitmq.com/priority.html" target="_blank">Prior Queue</a><a class="headerlink" href="#prior-queue" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>RabbitMQ可以设置队列的优先级，具备优先级属性的队列就是优先队列，优先级取值在1-255之间，但是建议取值是1-5，优先级高则享有更多资源，优先级上限不建议取太高，因为RabbitMQ的Priority调度由Erlang实现，级别越高占用的CPU资源越多（具体原因请参考<a href="https://www.rabbitmq.com/runtime.html" target="_blank">runtime-process</a>）</p>
+</li>
+<li>
+<p>与Exchanger不同的是，PriorityQUeue的创建不支持使用Policy，而是需要使用Client-provided Optional Arguments "x-max-priority"来设置队列的优先级</p>
+<p>原因在于队列的优先级一旦在创建时确定就不能改变，而使用Policy的原因正是希望支持动态改变RabbitMQ组件的属性</p>
+</li>
+<li>
+<p>message也可以携带priority属性，没有则设置为0，设置区间为0-255，建议值0-5。在处理来自Priority Queue中的消息时需要设置Qos，确保message参与了Priority的调度，否则consumer会过早确认message导致消息来不及参与调度，Priority属性就失去意义了。</p>
+<div class="highlight"><pre><span></span><code>因为Qos的存在，低优先级消息也可能先被处理（因为队列FIFO性质先于Priority调度）
+</code></pre></div>
+</li>
+<li>
+<p>consumer也具有priority属性，这里按照consumer能否处理消息划分出了active和block两种状态，priority相同的consumer使用round-robin方式接受消息</p>
+</li>
+</ul>
+</details>
+<details class="section" open="open">
+<summary>③ Message</summary>
+</details>
+<h2 id="rabbitmq实现机制">RabbitMQ实现机制<a class="headerlink" href="#rabbitmq实现机制" title="Permanent link">&para;</a></h2>
+<details class="section" open="open">
+<summary>① Security</summary>
+<p>RabbitMQ被广泛应用于分布式领域，而对于分布式系统，需要始终假设它是不安全不可靠的，所以本段落主要介绍RabbitMQ中保证信息可靠安全的机制</p>
+<h3 id="confirms">Confirms<a class="headerlink" href="#confirms" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>可以类比tcp协议中的ack机制，confirms提供了ack，nack，reject消息的接口
+</code></pre></div>
+<p><a href="https://www.rabbitmq.com/confirms.html" target="_blank">this</a></p>
+</details>
+<details class="section" open="open">
+<summary>② Routing</summary>
+<h3 id="binding"><a href="https://www.rabbitmq.com/e2e.html">binding</a><a class="headerlink" href="#binding" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://www.rabbitmq.com/sender-selected.html" target="_blank">sender-selected Distribution</a></p>
+<p>消息发送方除了默认的路由键之外还可以通过使用CC或者BCC消息头部携带额外的路由键，两者类型都是字符串数组，区别在于设置的BCC键和值将在发送之前从消息中删除</p>
+</li>
+</ul>
+</details>
+<details class="section" open="open">
+<summary>③ Lifecycle</summary>
+</details>
+<details class="section" open="open">
+<summary>④ Network</summary>
 </details>
 
 
@@ -834,11 +1220,13 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

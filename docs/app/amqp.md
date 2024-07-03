@@ -2,13 +2,20 @@
 
  **写于 2023-12-31 兔年的最后一天**
 !!! info "引言"
-    本篇文章将会涉及到对应用层协议AMQP(Advanced Message Queuing Protocols)以及消息队列rabbitMQ的介绍，本文旨在串联起网络相关的知识点，对于在介绍AMQP过程中涉及到的其他计算机网络相关的技术原理，只会进行比较浅显的介绍
+    本篇文章将会介绍应用层协议[AMQP 0-9-1(Advanced Message Queuing Protocols)](https://rabbitmq.com/resources/specs/amqp0-9-1.pdf){target="_blank"}以及消息队列RabbitMQ，对于在介绍AMQP过程中涉及到的其他计算机网络相关的技术原理，只会进行比较浅显的介绍
 
     1. AMQP是一种用于客户端程序之间相互通信的应用层协议,它为C/S架构的通信实体的行为制定了抽象的需要遵守的规范，它是一种可编程的协议，提供给了应用开发者一部分自由，具体的实现细节例如实体间的通信路由交给开发者自行设计
     2. RabbitMQ是使用Erlang编程语言开发的一款消息队列应用,具体实现了AMQP 0-9-1 协议
     [rabbitMQ官方文档](https://www.rabbitmq.com/tutorials/amqp-concepts.html#highlevel-overview)
 
 ## 认识RabbitMQ
+!!! info "官方简介"
+    摘自一篇较新的[官方博客](https://blog.rabbitmq.com/posts/2023/07/mqtt5){target="_blank"}中的概述
+
+    - is the leading AMQP 0.9.1 broker
+    - is a streaming broker
+    - excels in cross-protocol interoperability
+    - is becoming one of the leading MQTT brokers thanks to support for MQTT 5.0 released in 3.13 and Native MQTT released in 3.12
 
 RabbitMQ架构图
 ![架构](img/amqp1.png)
@@ -37,7 +44,6 @@ RabbitMQ架构图
     - 交换机对消息进行路由
     - 为队列绑定键
     - 消息持久化和确认
-
 
 ???+ section "② 应用关键词解释"
 
@@ -120,19 +126,19 @@ RabbitMQ架构图
 
 ???+ section "④ RabbitMQ与Erlang"
 
-    RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 (详情请查阅[官方文档](https://www.erlang.org/))。
+    RabbitMQ的核心部分使用erlang语言编写，现在这是一门冷门的语言，但是这门语言并不普通 (详情请查阅[官方文档](https://www.erlang.org/){target="_blank"})。
 
     Erlang的语言哲学从设计之初就包含了高并发的思想，采用了轻量化的多进程模型（尽管当时的硬件并不能支持高并发），同时它也是一门函数式编程的语言，在正常的代码开发中也会涉及到大量的递归调用，这些都加大了学习的难度，另外erlang应用的开发是基于OTP思想，同现在流行的面向对象(OOP)思想又有些差异，这需要学习者能够改变固有思维
 
     综上，解读RabbitMQ源码的难度不小，并且源码实现蕴含的思想涉及到的知识面非常广，因此在拓宽眼界的同时需要抓住重点。
 
-## [RabbitMq对AMQP的扩展](https://www.rabbitmq.com/extensions.html)
+## [RabbitMq对AMQP的扩展](https://www.rabbitmq.com/extensions.html){target="_blank"}
 
 原文根据RabbitMQ的行为对具体概念进行了归类，不过本文选择根据组件的种类进行分类，并且省略了部分内容
 
 ???+ section "① Exchanger"
 
-    ### [Alternate Exchange](https://www.rabbitmq.com/ae.html)
+    ### [Alternate Exchange](https://www.rabbitmq.com/ae.html){target="_blank"}
 
     Alternate Exchange 下文简称AE，这个组件起到了路由分支选择的作用，如果希望消息无法被Exchanger 成功路由时可以执行其他的行为，则可以配置AE，它提供了一种路由选择的else语义。
 
@@ -170,22 +176,50 @@ RabbitMQ架构图
 
 ???+ section "② Queue"
 
-    ### [Prior Queue](https://www.rabbitmq.com/priority.html)
+    ### [Prior Queue](https://www.rabbitmq.com/priority.html){target="_blank"}
+
+    - RabbitMQ可以设置队列的优先级，具备优先级属性的队列就是优先队列，优先级取值在1-255之间，但是建议取值是1-5，优先级高则享有更多资源，优先级上限不建议取太高，因为RabbitMQ的Priority调度由Erlang实现，级别越高占用的CPU资源越多（具体原因请参考[runtime-process](https://www.rabbitmq.com/runtime.html){target="_blank"}）
+
+    - 与Exchanger不同的是，PriorityQUeue的创建不支持使用Policy，而是需要使用Client-provided Optional Arguments "x-max-priority"来设置队列的优先级
+
+        原因在于队列的优先级一旦在创建时确定就不能改变，而使用Policy的原因正是希望支持动态改变RabbitMQ组件的属性
+
+    - message也可以携带priority属性，没有则设置为0，设置区间为0-255，建议值0-5。在处理来自Priority Queue中的消息时需要设置Qos，确保message参与了Priority的调度，否则consumer会过早确认message导致消息来不及参与调度，Priority属性就失去意义了。
+
+            因为Qos的存在，低优先级消息也可能先被处理（因为队列FIFO性质先于Priority调度）
+    - consumer也具有priority属性，这里按照consumer能否处理消息划分出了active和block两种状态，priority相同的consumer使用round-robin方式接受消息
+
+
 
 ???+ section "③ Message"
 
+
+
 ## RabbitMQ实现机制
 
-???+ section "① Confirms"
+???+ section "① Security"
 
-    [this](https://www.rabbitmq.com/confirms.html)
+    RabbitMQ被广泛应用于分布式领域，而对于分布式系统，需要始终假设它是不安全不可靠的，所以本段落主要介绍RabbitMQ中保证信息可靠安全的机制
 
-???+ section "② routing"
+    ### Confirms
+
+        可以类比tcp协议中的ack机制，confirms提供了ack，nack，reject消息的接口
+
+
+    [this](https://www.rabbitmq.com/confirms.html){target="_blank"}
+
+???+ section "② Routing"
 
     ### [binding](https://www.rabbitmq.com/e2e.html)
+    - [sender-selected Distribution](https://www.rabbitmq.com/sender-selected.html){target="_blank"}
+
+        消息发送方除了默认的路由键之外还可以通过使用CC或者BCC消息头部携带额外的路由键，两者类型都是字符串数组，区别在于设置的BCC键和值将在发送之前从消息中删除
+
+???+ section "③ Lifecycle"
+
+
+???+ section "④ Network"
 
 
 
-    ### [send-select routing](https://www.rabbitmq.com/sender-selected.html)
 
-???+ section
